@@ -1,4 +1,4 @@
-#pragma once
+
 #include "Week3Exercise2.h"
 #include <chrono>
 
