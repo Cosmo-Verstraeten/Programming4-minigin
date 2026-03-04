@@ -12,6 +12,7 @@ namespace dae
 		void Add(std::unique_ptr<GameObject> object);
 		void Remove(const GameObject& object);
 		void RemoveAll();
+		void DefinitiveRemove();
 
 		void Update();
 		void Render() const;
@@ -27,6 +28,7 @@ namespace dae
 		explicit Scene() = default;
 
 		std::vector < std::unique_ptr<GameObject>> m_objects{};
+		std::vector<GameObject*> m_pendingRemoval;
 	};
 
 }

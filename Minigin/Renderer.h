@@ -1,7 +1,9 @@
 #pragma once
 #include <SDL3/SDL.h>
 #include "Singleton.h"
-
+#include "Week3Exercise1.h"
+#include "Week3Exercise2.h"
+#include "Week3Exercise2Alt.h"
 namespace dae
 {
 	class Texture2D;
@@ -25,6 +27,14 @@ namespace dae
 
 		const SDL_Color& GetBackgroundColor() const { return m_clearColor; }
 		void SetBackgroundColor(const SDL_Color& color) { m_clearColor = color; }
+
+	private:
+		mutable Week3Exercise1 exercise1;
+		std::vector<float>& results1 = exercise1.ReturnResults();
+		mutable Week3Exercise2 exercise2;
+		std::vector<float>& results2 = exercise2.ReturnResults();
+		mutable Week3Exercise2Alt exercise2Alt;
+		std::vector<float>& results2Alt = exercise2Alt.ReturnResults();
 	};
 }
 
