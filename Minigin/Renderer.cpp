@@ -54,7 +54,7 @@ void dae::Renderer::Render() const
 	ImGui::NewFrame();
 
 
-	ImGui::Begin("Exercise 1");
+	/*ImGui::Begin("Exercise 1");
 
 	ImGui::SetNextItemWidth(200);
 	ImGui::InputInt("# samples", &samples);
@@ -120,10 +120,10 @@ void dae::Renderer::Render() const
 		);
 	}
 
-	ImGui::End();
+	ImGui::End();*/
 
 	ImGui::Render();
-
+	
 
 	const auto& color = GetBackgroundColor();
 	SDL_SetRenderDrawColor(m_renderer, color.r, color.g, color.b, color.a);

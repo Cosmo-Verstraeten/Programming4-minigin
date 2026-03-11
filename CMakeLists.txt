@@ -15,6 +15,9 @@ endif()
 
 # list source files here
 add_executable(${TARGET_NAME} ${TARGET_PARAM}
+  Minigin/Command.cpp
+  Minigin/Component.cpp
+  Minigin/Controller.cpp
   Minigin/Font.cpp
   Minigin/GameObject.cpp
   Minigin/InputManager.cpp
@@ -27,10 +30,12 @@ add_executable(${TARGET_NAME} ${TARGET_PARAM}
   Minigin/TextObject.cpp
   Minigin/Texture2D.cpp
   Minigin/Transform.cpp
-  Minigin/Component.cpp
   Minigin/Week3Exercise1.cpp
   Minigin/Week3Exercise2.cpp
   Minigin/Week3Exercise2Alt.cpp)
+
+  #add xinput for controller input
+target_link_libraries(${TARGET_NAME} PUBLIC xinput.lib)
 
 # enable c++20 features
 target_compile_features(${TARGET_NAME} PUBLIC cxx_std_20)
@@ -47,6 +52,8 @@ if(NOT glm_FOUND)
   )
   FetchContent_MakeAvailable(glm)
 endif()
+
+
 
 # Add SDL3
 find_package(SDL3 3.4 CONFIG QUIET)

@@ -10,6 +10,7 @@
 #include "ResourceManager.h"
 #include "TextObject.h"
 #include "Scene.h"
+#include "InputManager.h"
 
 #include <filesystem>
 namespace fs = std::filesystem;
